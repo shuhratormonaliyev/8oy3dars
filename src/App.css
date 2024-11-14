@@ -1,0 +1,107 @@
+/* interface Job {
+  company: string
+  logo: string
+  isNew: boolean
+  isFeatured: boolean
+  position: string
+  postedAt: string
+  workType: string
+  location: string
+  tags: string[]
+}
+
+export default function Component() {
+  const jobs: Job[] = [
+    {
+      company: "Photosnap",
+      logo: "/placeholder.svg?height=48&width=48",
+      isNew: true,
+      isFeatured: true,
+      position: "Senior Frontend Developer",
+      postedAt: "1d ago",
+      workType: "Full Time",
+      location: "USA only",
+      tags: ["Frontend", "Senior", "HTML", "CSS", "JavaScript"]
+    },
+    {
+      company: "Manage",
+      logo: "/placeholder.svg?height=48&width=48",
+      isNew: true,
+      isFeatured: true,
+      position: "Fullstack Developer",
+      postedAt: "1d ago",
+      workType: "Part Time",
+      location: "Remote",
+      tags: ["Fullstack", "Midweight", "Python", "React"]
+    },
+    {
+      company: "Account",
+      logo: "/placeholder.svg?height=48&width=48",
+      isNew: true,
+      isFeatured: false,
+      position: "Junior Frontend Developer",
+      postedAt: "2d ago",
+      workType: "Part Time",
+      location: "USA only",
+      tags: ["Frontend", "Junior", "React", "Sass", "JavaScript"]
+    }
+  ]
+
+  return (
+    <div className="p-4 space-y-4 bg-gray-100 min-h-screen">
+      {jobs.map((job, index) => (
+        <Card key={index} className="p-6 bg-white shadow-sm border-l-4 border-l-primary">
+          <div className="flex flex-col md:flex-row md:items-center gap-4">
+            <div className="flex-shrink-0">
+              <Image
+                src={job.logo}
+                alt={`${job.company} logo`}
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
+            </div>
+            <div className="flex-grow space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="text-primary font-semibold">{job.company}</span>
+                <div className="flex gap-2">
+                  {job.isNew && (
+                    <Badge variant="default" className="bg-primary text-xs uppercase">
+                      New!
+                    </Badge>
+                  )}
+                  {job.isFeatured && (
+                    <Badge variant="default" className="bg-gray-900 text-xs uppercase">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
+              </div>
+              <h2 className="text-lg font-bold hover:text-primary cursor-pointer">
+                {job.position}
+              </h2>
+              <div className="text-muted-foreground flex items-center gap-4 text-sm">
+                <span>{job.postedAt}</span>
+                <span>•</span>
+                <span>{job.workType}</span>
+                <span>•</span>
+                <span>{job.location}</span>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 md:ml-auto">
+              {job.tags.map((tag, tagIndex) => (
+                <Badge
+                  key={tagIndex}
+                  variant="secondary"
+                  className="bg-primary/10 hover:bg-primary/20 text-primary cursor-pointer"
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </Card>
+      ))}
+    </div>
+  )
+} */
